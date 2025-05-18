@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pencatatan Kilometer Mobil</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Pencatatan Kilometer Mobil</h1>
+    <form id="kmForm" autocomplete="off">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="tanggal">Tanggal</label>
+          <input type="date" id="tanggal" name="tanggal" required />
+        </div>
+        <div class="form-group">
+          <label for="platNomor">Plat Nomor Mobil</label>
+          <input type="text" id="platNomor" name="platNomor" placeholder="Misal: B 1234 CD" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="jamKeluar">Jam Keluar</label>
+          <input type="time" id="jamKeluar" name="jamKeluar" required />
+        </div>
+        <div class="form-group">
+          <label for="jamMasuk">Jam Masuk</label>
+          <input type="time" id="jamMasuk" name="jamMasuk" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="kmAwal">Kilometer Awal (km)</label>
+          <input type="number" id="kmAwal" name="kmAwal" min="0" required placeholder="Misal: 15000" />
+        </div>
+        <div class="form-group">
+          <label for="kmAkhir">Kilometer Akhir (km)</label>
+          <input type="number" id="kmAkhir" name="kmAkhir" min="0" required placeholder="Misal: 15200" />
+        </div>
+      </div>
+      <button type="submit">Simpan Data</button>
+    </form>
+
+    <table id="recordsTable" aria-label="Tabel data pencatatan kilometer mobil">
+      <thead>
+        <tr>
+          <th>Tanggal</th>
+          <th>Plat Nomor</th>
+          <th>Jam Keluar</th>
+          <th>Jam Masuk</th>
+          <th>Kilometer Awal</th>
+          <th>Kilometer Akhir</th>
+          <th>Jarak Tempuh (km)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Records inserted here -->
+      </tbody>
+    </table>
+
+    <button class="btn-clear" id="clearBtn">Hapus Semua Data</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #eef2f7;
+  margin: 0;
+  padding: 20px;
+  color: #2c3e50;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 30px 40px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #34495e;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.form-group {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #34495e;
+}
+input[type="date"],
+input[type="time"],
+input[type="number"],
+input[type="text"] {
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  transition: border-color 0.3s ease-in-out;
+}
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="number"]:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 8px #4a90e2aa;
+}
+button[type="submit"] {
+  margin-top: 14px;
+  background-color: #4a90e2;
+  border: none;
+  color: white;
+  padding: 16px 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+button[type="submit"]:hover {
+  background-color: #357abd;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  display: block;
+}
+thead {
+  background-color: #4a90e2;
+  color: white;
+}
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #d1d5db;
+  text-align: center;
+  white-space: nowrap;
+}
+tbody tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+tbody tr:hover {
+  background-color: #e0e7ff;
+}
+.btn-clear {
+  margin-top: 20px;
+  background-color: #e53e3e;
+  border: none;
+  color: white;
+  padding: 14px 0;
+  width: 160px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-clear:hover {
+  background-color: #9b2c2c;
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 20px 20px 30px;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .form-group {
+    min-width: auto;
+  }
+  button[type="submit"] {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    align-self: stretch;
+  }
+  table {
+    font-size: 0.9rem;
+  }
+  .btn-clear {
+    width: 100%;
+    padding: 16px 0;
+  }
+}
+@media (min-width: 701px) and (max-width: 1200px) {
+  .container {
+    max-width: 700px;
+    padding: 25px 30px;
+  }
+}
+    
